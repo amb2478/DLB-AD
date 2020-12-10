@@ -1,0 +1,5 @@
+setwd("~/Downloads")
+imaging<-read.csv("imaging.csv", header=TRUE)
+stats<-read.csv("stats.csv", header=TRUE)
+total<-merge(x=imaging, y=stats, by="RID", all.x=TRUE, all.y=TRUE)
+write.csv(total, "/Users/allisonbeers/Downloads/total.csv")
